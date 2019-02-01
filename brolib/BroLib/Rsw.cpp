@@ -197,11 +197,11 @@ Rsw::Rsw(const std::string &fileName, bool loadModels)
 				light->todo = file->readString(40);
 				light->position = file->readVec3();
 				light->color = file->readVec3();
-				light->todo2 = file->readFloat();
+				light->range = file->readFloat();
 				objects.push_back(light);
 
 
-				light->range = 100;
+				//light->range = 100;
 				light->type = Light::Type::Point;
 				light->givesShadow = true;
 				light->intensity = 20;
@@ -213,7 +213,7 @@ Rsw::Rsw(const std::string &fileName, bool loadModels)
 					{
 						if (l["id"] == i)
 						{
-							light->range = l["range"];
+							//light->range = l["range"];
 							if (l["type"] == "point")
 								light->type = Light::Type::Point;
 							if (l["type"] == "spot")
@@ -390,7 +390,7 @@ void Rsw::save(const std::string &fileName)
 			pFile->writeString(light->todo, 40);
 			pFile->writeVec3(light->position);
 			pFile->writeVec3(light->color);
-			pFile->writeFloat(light->todo2);
+			pFile->writeFloat(light->range);
 
 			json l;
 			l["id"] = i;
@@ -398,7 +398,7 @@ void Rsw::save(const std::string &fileName)
 				l["type"] = "point";
 			if (light->type == Light::Type::Spot)
 				l["type"] = "spot";
-			l["range"] = light->range;
+			//l["range"] = light->range;
 			l["shadow"] = light->givesShadow;
 			l["cutoff"] = light->cutOff;
 			l["intensity"] = light->intensity;

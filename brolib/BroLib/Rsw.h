@@ -77,7 +77,7 @@ public:
 	public:
 		std::string 	todo;
 		glm::vec3		color;
-		float			todo2;
+		//float			todo2;
 		
 		Light() : Object(Object::Type::Light)
 		{

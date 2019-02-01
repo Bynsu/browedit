@@ -40,6 +40,8 @@ LightPropertiesWindow::LightPropertiesWindow(Rsw::Light* light, blib::ResourceMa
 	getComponent<blib::wm::widgets::Button>("btnCancel")->addClickHandler([this](int, int, int) { close(); return true;  });
 	getComponent<blib::wm::widgets::Button>("btnOk")->addClickHandler([this, light, browEdit](int, int, int)
 	{ 
+		light->name = getComponent<blib::wm::widgets::Textbox>("name")->text;
+
 		light->position.x = (float)atof(getComponent<blib::wm::widgets::Textbox>("positionx")->text.c_str());
 		light->position.y = (float)atof(getComponent<blib::wm::widgets::Textbox>("positiony")->text.c_str());
 		light->position.z = (float)atof(getComponent<blib::wm::widgets::Textbox>("positionz")->text.c_str());
@@ -52,7 +54,9 @@ LightPropertiesWindow::LightPropertiesWindow(Rsw::Light* light, blib::ResourceMa
 		light->scale.y = (float)atof(getComponent<blib::wm::widgets::Textbox>("scaley")->text.c_str());
 		light->scale.z = (float)atof(getComponent<blib::wm::widgets::Textbox>("scalez")->text.c_str());
 
-		light->name = getComponent<blib::wm::widgets::Textbox>("name")->text;
+		light->color.r = (float)atof(getComponent<blib::wm::widgets::Textbox>("colorr")->text.c_str());
+		light->color.g = (float)atof(getComponent<blib::wm::widgets::Textbox>("colorg")->text.c_str());
+		light->color.b = (float)atof(getComponent<blib::wm::widgets::Textbox>("colorb")->text.c_str());
 
 		light->range = (float)atof(getComponent<blib::wm::widgets::Textbox>("range")->text.c_str());
 		light->intensity = (float)atof(getComponent<blib::wm::widgets::Textbox>("intensity")->text.c_str());

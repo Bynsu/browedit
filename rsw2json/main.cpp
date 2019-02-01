@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
 			o["position"] = vec3(light->position);
 			o["todo"] = light->todo; 
 			o["color"] = vec3(light->color);
-			o["todo2"] = light->todo2;
+			//o["todo2"] = light->;
 		}
 			break;
 		case Rsw::Object::Type::Sound://3: //Sound

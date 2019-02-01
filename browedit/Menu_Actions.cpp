@@ -70,17 +70,21 @@ void BrowEdit::menuActionsLightmapCalculate()
 			return false;
 		};
 
-
+		struct CalculatedLight {
+			int intensity, r, g, b;
+		};
 
 		auto calculateLight = [this, lightDirection, &lights, collidesMap](const glm::vec3 &groundPos, const glm::vec3 &normal)
 		{
-			int intensity = 0;
+			CalculatedLight ret = { 0 };
 
-			if (map->getRsw()->light.lightmapAmbient > 0)
-				intensity = (int)(map->getRsw()->light.lightmapAmbient * 255);
+			if ( map->getRsw()->light.lightmapAmbient > 0 ) {
+				ret.intensity = (int)( map->getRsw()->light.lightmapAmbient * 255 );
+			}
 
 			//sunlight calculation
-			if (map->getRsw()->light.lightmapIntensity > 0 && glm::dot(normal, lightDirection) > 0)
+			float dot = glm::max(glm::dot(normal, lightDirection), 0.0f);
+			if (map->getRsw()->light.lightmapIntensity > 0 && dot > 0)
 			{
 				blib::math::Ray ray(groundPos, glm::normalize(lightDirection));
 				bool collides = false;
@@ -99,12 +103,8 @@ void BrowEdit::menuActionsLightmapCalculate()
 				if (!collides && collidesMap(ray))
 					collides = true;
 				//check walls
-
-
 				if (!collides)
-				{
-					intensity += (int)(map->getRsw()->light.lightmapIntensity * 255);
-				}
+					ret.intensity += (int)(map->getRsw()->light.lightmapIntensity * dot * 255);
 			}
 
 			//point light calculations
@@ -112,18 +112,14 @@ void BrowEdit::menuActionsLightmapCalculate()
 			{
 				glm::vec3 lightPosition(5 * map->getGnd()->width + light->position.x, -light->position.y, 5 * map->getGnd()->height - light->position.z);
 
-				float distance = glm::distance(lightPosition, groundPos);
-				if (distance > light->realRange())
+				glm::vec3 vdist = lightPosition - groundPos;
+				float dist = glm::length(vdist);
+				if ( dist >= light->range )
 					continue;
 
-				float d = glm::max(distance - light->range, 0.0f);
-				float denom = d / light->range + 1;
-				float attenuation = light->intensity / (denom * denom);
-				if (light->cutOff > 0)
-					attenuation = glm::max(0.0f, (attenuation - light->cutOff) / (1 - light->cutOff));
+				float brightness = ( light->range - dist ) / light->range;
 
-
-				blib::math::Ray ray(groundPos, glm::normalize(lightPosition - groundPos));
+				blib::math::Ray ray(groundPos, glm::normalize(vdist));
 				bool collides = false;
 				for (Rsw::Object* o : map->getRsw()->objects)
 				{
@@ -133,13 +129,18 @@ void BrowEdit::menuActionsLightmapCalculate()
 						break;
 					}
 				}
+
+				float dot = glm::max(glm::dot(glm::normalize(vdist), normal), 0.0f);
 				if (!collides)
 				{
-					intensity += (int)attenuation;
+					//intensity += light->intensity * dot * attenuation;
+					ret.r += (int)( light->color.r * dot * brightness * 400 );
+					ret.g += (int)( light->color.g * dot * brightness * 400 );
+					ret.b += (int)( light->color.b * dot * brightness * 400 );
 				}
 			}
 
-			return intensity;
+			return ret;
 		};
 
 
@@ -155,7 +156,8 @@ void BrowEdit::menuActionsLightmapCalculate()
 			{
 				for (int yy = 1; yy < 7; yy++)
 				{
-					int totalIntensity = 0;
+					//int totalIntensity = 0;
+					CalculatedLight total = { 0 };
 					int count = 0;
 					for (float xxx = 0; xxx < 1; xxx += quality)
 					{
@@ -197,19 +199,36 @@ void BrowEdit::menuActionsLightmapCalculate()
 
 							}
 
-							totalIntensity += calculateLight(groundPos, normal);
+							CalculatedLight cl = calculateLight(groundPos, normal);
+							total.intensity += cl.intensity;
+							total.r += cl.r;
+							total.g += cl.g;
+							total.b += cl.b;
+
 							count++;
 						}
 					}
 
-					int intensity = totalIntensity / count;
+					int intensity = total.intensity / ( count );
 					if (intensity > 255)
 						intensity = 255;
 
+					int r = total.r / ( count );
+					if ( r > 255 )
+						r = 255;
+
+					int g = total.g / ( count );
+					if ( g > 255 )
+						g = 255;
+
+					int b = total.b / ( count );
+					if ( b > 255 )
+						b = 255;
+
 					lightmap->data[xx + 8 * yy] = intensity;
-					lightmap->data[64 + 3 * (xx + 8 * yy) + 0] = 0;
-					lightmap->data[64 + 3 * (xx + 8 * yy) + 1] = 0;
-					lightmap->data[64 + 3 * (xx + 8 * yy) + 2] = 0;
+					lightmap->data[64 + 3 * (xx + 8 * yy) + 0] = r;
+					lightmap->data[64 + 3 * (xx + 8 * yy) + 1] = g;
+					lightmap->data[64 + 3 * (xx + 8 * yy) + 2] = b;
 				}
 			}
 		};
