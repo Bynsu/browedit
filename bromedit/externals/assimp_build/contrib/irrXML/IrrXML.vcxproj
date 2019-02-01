@@ -38,18 +38,18 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\irrXML\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\assimp_build\contrib\irrXML\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">IrrXML.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">IrrXML</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\irrXML\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\assimp_build\contrib\irrXML\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">IrrXML.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">IrrXML</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -68,10 +68,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WIN32_LEAN_AND_MEAN;ASSIMP_BUILD_NO_C4D_IMPORTER;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -84,7 +84,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -103,10 +103,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;ASSIMP_BUILD_NO_C4D_IMPORTER;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -118,10 +118,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp/contrib/irrXML/CMakeLists.txt</Message>
+    <CustomBuild Include="..\..\assimp\contrib\irrXML\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule ../../assimp/contrib/irrXML/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp -BC:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build --check-stamp-file C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/contrib/irrXML/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -H../../assimp -B../../assimp_build --check-stamp-file ../../assimp_build/contrib/irrXML/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,12 +129,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp/contrib/irrXML/CMakeLists.txt;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\CMakeLists.txt;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\irrXML\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../assimp/contrib/irrXML/CMakeLists.txt;..\..\assimp\contrib\irrXML\CMakeLists.txt;..\..\assimp\contrib\irrXML\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\assimp_build\contrib\irrXML\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp/contrib/irrXML/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule ../../assimp/contrib/irrXML/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp -BC:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build --check-stamp-file C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/contrib/irrXML/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -H../../assimp -B../../assimp_build --check-stamp-file ../../assimp_build/contrib/irrXML/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -142,25 +142,19 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp/contrib/irrXML/CMakeLists.txt;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\CMakeLists.txt;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\irrXML\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../assimp/contrib/irrXML/CMakeLists.txt;..\..\assimp\contrib\irrXML\CMakeLists.txt;..\..\assimp\contrib\irrXML\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\assimp_build\contrib\irrXML\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\CXMLReaderImpl.h" />
-    <ClInclude Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\heapsort.h" />
-    <ClInclude Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\irrArray.h" />
-    <ClInclude Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\irrString.h" />
-    <ClInclude Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\irrTypes.h" />
-    <ClCompile Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\irrXML.cpp" />
-    <ClInclude Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\irrXML\irrXML.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\ZERO_CHECK.vcxproj">
-      <Project>{5B89CF5F-8EE2-3E32-AD78-AD5968974E09}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
+    <ClInclude Include="..\..\assimp\contrib\irrXML\CXMLReaderImpl.h" />
+    <ClInclude Include="..\..\assimp\contrib\irrXML\heapsort.h" />
+    <ClInclude Include="..\..\assimp\contrib\irrXML\irrArray.h" />
+    <ClInclude Include="..\..\assimp\contrib\irrXML\irrString.h" />
+    <ClInclude Include="..\..\assimp\contrib\irrXML\irrTypes.h" />
+    <ClCompile Include="..\..\assimp\contrib\irrXML\irrXML.cpp" />
+    <ClInclude Include="..\..\assimp\contrib\irrXML\irrXML.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

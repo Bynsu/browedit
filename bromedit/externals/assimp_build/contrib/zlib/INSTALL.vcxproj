@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;..\..\assimp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -65,7 +65,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;..\..\assimp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -86,7 +86,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\dd340085e95e471f5292241ff32af275\INSTALL_force.rule">
+    <CustomBuild Include="..\..\assimp_build\CMakeFiles\dd340085e95e471f5292241ff32af275\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -97,8 +97,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/CMakeFiles/dd340085e95e471f5292241ff32af275/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../assimp_build/CMakeFiles/dd340085e95e471f5292241ff32af275/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\assimp_build\contrib\zlib\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
@@ -110,17 +110,17 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/CMakeFiles/dd340085e95e471f5292241ff32af275/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../assimp_build/CMakeFiles/dd340085e95e471f5292241ff32af275/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\assimp_build\contrib\zlib\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="..\..\assimp_build\ZERO_CHECK.vcxproj">
       <Project>{5B89CF5F-8EE2-3E32-AD78-AD5968974E09}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib\ALL_BUILD.vcxproj">
+    <ProjectReference Include="..\..\assimp_build\contrib\zlib\ALL_BUILD.vcxproj">
       <Project>{B972925B-D2D9-3032-9B68-C4429F25BA3C}</Project>
       <Name>ALL_BUILD</Name>
     </ProjectReference>

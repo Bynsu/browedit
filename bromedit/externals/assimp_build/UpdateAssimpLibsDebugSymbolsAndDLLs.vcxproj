@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -53,7 +53,7 @@
     <PostBuildEvent>
       <Message>							</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Release/assimp-vc140-mt.dll assimp-vc140-mt.dll
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Release/assimp-vc140-mt.dll assimp-vc140-mt.dll
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -62,7 +62,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Release/assimp-vc140-mt.exp assimp-vc140-mt.exp
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Release/assimp-vc140-mt.exp assimp-vc140-mt.exp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -71,7 +71,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Release/assimp-vc140-mt.lib assimp-vc140-mt.lib
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Release/assimp-vc140-mt.lib assimp-vc140-mt.lib
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -80,7 +80,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.dll assimp-vc140-mtd.dll
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.dll assimp-vc140-mtd.dll
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -89,7 +89,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.exp assimp-vc140-mtd.exp
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.exp assimp-vc140-mtd.exp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -98,7 +98,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.ilk assimp-vc140-mtd.ilk
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.ilk assimp-vc140-mtd.ilk
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -107,7 +107,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.lib assimp-vc140-mtd.lib
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.lib assimp-vc140-mtd.lib
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -116,7 +116,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.pdb assimp-vc140-mtd.pdb
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.pdb assimp-vc140-mtd.pdb
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -128,7 +128,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\.;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\include;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\contrib\zlib;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\assimp\.;..\..\assimp\include;..\..\assimp_build;..\..\assimp_build\include;..\..\assimp\contrib\zlib;..\..\assimp_build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -138,7 +138,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>							</Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Release/assimp-vc140-mt.dll assimp-vc140-mt.dll
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Release/assimp-vc140-mt.dll assimp-vc140-mt.dll
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -147,7 +147,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Release/assimp-vc140-mt.exp assimp-vc140-mt.exp
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Release/assimp-vc140-mt.exp assimp-vc140-mt.exp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -156,7 +156,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Release/assimp-vc140-mt.lib assimp-vc140-mt.lib
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Release/assimp-vc140-mt.lib assimp-vc140-mt.lib
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -165,7 +165,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.dll assimp-vc140-mtd.dll
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.dll assimp-vc140-mtd.dll
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -174,7 +174,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.exp assimp-vc140-mtd.exp
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.exp assimp-vc140-mtd.exp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -183,7 +183,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.ilk assimp-vc140-mtd.ilk
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.ilk assimp-vc140-mtd.ilk
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -192,7 +192,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.lib assimp-vc140-mtd.lib
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.lib assimp-vc140-mtd.lib
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -201,7 +201,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/code/Debug/assimp-vc140-mtd.pdb assimp-vc140-mtd.pdb
+"C:\Program Files\CMake\bin\cmake.exe" -E copy ../../assimp_build/code/Debug/assimp-vc140-mtd.pdb assimp-vc140-mtd.pdb
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -212,10 +212,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp/CMakeLists.txt</Message>
+    <CustomBuild Include="..\..\assimp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule ../../assimp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp -BC:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build --check-stamp-file C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -H../../assimp -B../../assimp_build --check-stamp-file ../../assimp_build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -223,12 +223,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp/CMakeLists.txt;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\CMakeLists.txt;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\revision.h.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include\assimp\config.h.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindPkgMacros.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\PrecompiledHeader.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\cmake_uninstall.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimp-config.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimpTargets.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimpTargets-debug.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimpTargets-release.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimp-config-version.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindDirectX.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindPkgMacros.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindZLIB.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindPkgMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimp.pc.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../assimp/CMakeLists.txt;..\..\assimp\CMakeLists.txt;..\..\assimp_build\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;..\..\assimp_build\CMakeFiles\3.10.1\CMakeCCompiler.cmake;..\..\assimp_build\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;..\..\assimp_build\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;..\..\assimp\revision.h.in;..\..\assimp\include\assimp\config.h.in;..\..\assimp\cmake-modules\FindPkgMacros.cmake;..\..\assimp\cmake-modules\PrecompiledHeader.cmake;..\..\assimp\cmake-modules\cmake_uninstall.cmake.in;..\..\assimp\assimp-config.cmake.in;..\..\assimp\assimpTargets.cmake.in;..\..\assimp\assimpTargets-debug.cmake.in;..\..\assimp\assimpTargets-release.cmake.in;..\..\assimp\assimp-config-version.cmake.in;..\..\assimp\cmake-modules\FindDirectX.cmake;..\..\assimp\cmake-modules\FindPkgMacros.cmake;..\..\assimp\cmake-modules\FindZLIB.cmake;..\..\assimp\cmake-modules\FindPkgMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;..\..\assimp\assimp.pc.in;..\..\assimp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\assimp_build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule ../../assimp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp -BC:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build --check-stamp-file C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp_build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -H../../assimp -B../../assimp_build --check-stamp-file ../../assimp_build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -236,15 +236,15 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/johan/Desktop/git/browedit/bromedit/externals/assimp/CMakeLists.txt;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\CMakeLists.txt;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\3.10.1\CMakeCCompiler.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\revision.h.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\include\assimp\config.h.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindPkgMacros.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\PrecompiledHeader.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\cmake_uninstall.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimp-config.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimpTargets.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimpTargets-debug.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimpTargets-release.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimp-config-version.cmake.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindDirectX.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindPkgMacros.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindZLIB.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\cmake-modules\FindPkgMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\assimp.pc.in;C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../assimp/CMakeLists.txt;..\..\assimp\CMakeLists.txt;..\..\assimp_build\CMakeFiles\3.10.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;..\..\assimp_build\CMakeFiles\3.10.1\CMakeCCompiler.cmake;..\..\assimp_build\CMakeFiles\3.10.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;..\..\assimp_build\CMakeFiles\3.10.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;..\..\assimp\revision.h.in;..\..\assimp\include\assimp\config.h.in;..\..\assimp\cmake-modules\FindPkgMacros.cmake;..\..\assimp\cmake-modules\PrecompiledHeader.cmake;..\..\assimp\cmake-modules\cmake_uninstall.cmake.in;..\..\assimp\assimp-config.cmake.in;..\..\assimp\assimpTargets.cmake.in;..\..\assimp\assimpTargets-debug.cmake.in;..\..\assimp\assimpTargets-release.cmake.in;..\..\assimp\assimp-config-version.cmake.in;..\..\assimp\cmake-modules\FindDirectX.cmake;..\..\assimp\cmake-modules\FindPkgMacros.cmake;..\..\assimp\cmake-modules\FindZLIB.cmake;..\..\assimp\cmake-modules\FindPkgMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckFunctionExists.cmake;..\..\assimp\assimp.pc.in;..\..\assimp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\assimp_build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\johan\Desktop\git\browedit\bromedit\externals\assimp_build\ZERO_CHECK.vcxproj">
+    <ProjectReference Include="..\..\assimp_build\ZERO_CHECK.vcxproj">
       <Project>{5B89CF5F-8EE2-3E32-AD78-AD5968974E09}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
