@@ -1317,6 +1317,30 @@ void BrowEdit::addLight(const json &properties)
 	map->getRsw()->objects.push_back(newLight);
 }
 
+
+void BrowEdit::addLightFromExisting(const Rsw::Light &oldLight)
+{
+	auto newLight = new Rsw::Light();
+	newObject = newLight;
+	newLight->matrixCached = false;
+	newLight->name = oldLight.name + "_copy";
+
+	//newLight->position = glm::vec3(mapRenderer.mouse3d.x - map->getGnd()->width * 5, -mapRenderer.mouse3d.y, -mapRenderer.mouse3d.z + ( 10 + 5 * map->getGnd()->height ));
+	newLight->position = oldLight.position + glm::vec3(10, 0, 10);
+	newLight->rotation = oldLight.rotation;
+	newLight->scale = oldLight.scale;
+	newLight->color = oldLight.color;
+	newLight->type = oldLight.type;
+	newLight->range = oldLight.range;
+	newLight->givesShadow = oldLight.givesShadow;
+	newLight->intensity = oldLight.intensity;
+	newLight->cutOff = oldLight.cutOff;
+	newLight->selected = true;
+
+	map->getRsw()->objects.push_back(newLight);
+}
+
+
 void BrowEdit::perform(Action* action)
 {
 	std::for_each(undone.begin(), undone.end(), [](Action* a) { delete a; });

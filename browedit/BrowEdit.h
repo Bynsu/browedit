@@ -174,7 +174,7 @@ public:
 	void setObjectEditMode(ObjectEditModeTool newMode);
 	void addModel(const std::string &fileName);
 	void addLight(const json &lightProperties);
-
+	void addLightFromExisting(const Rsw::Light &oldLight);
 	void perform(Action* action);
 	void undo();
 	void redo();

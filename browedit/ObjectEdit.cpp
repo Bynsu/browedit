@@ -396,16 +396,20 @@ void BrowEdit::duplicateSelectedObjects()
 	{
 		if (map->getRsw()->objects[i]->selected)
 		{
-			if (map->getRsw()->objects[i]->type == Rsw::Object::Type::Model)
+			if ( map->getRsw()->objects[i]->type == Rsw::Object::Type::Model )
 			{
-				addModel(((Rsw::Model*)map->getRsw()->objects[i])->fileName);
-
+				addModel(( ( Rsw::Model* )map->getRsw()->objects[i] )->fileName);
 				map->getRsw()->objects[map->getRsw()->objects.size() - 1]->position = map->getRsw()->objects[i]->position + glm::vec3(10, 0, 10);
 				map->getRsw()->objects[map->getRsw()->objects.size() - 1]->rotation = map->getRsw()->objects[i]->rotation;
 				map->getRsw()->objects[map->getRsw()->objects.size() - 1]->scale = map->getRsw()->objects[i]->scale;
 
 				map->getRsw()->objects[i]->selected = false;
 				map->getRsw()->objects[map->getRsw()->objects.size() - 1]->selected = true;
+			}
+			else if ( map->getRsw()->objects[i]->type == Rsw::Object::Type::Light ) 
+			{
+				addLightFromExisting(*(Rsw::Light*)map->getRsw()->objects[i]);
+				map->getRsw()->objects[i]->selected = false;
 			}
 		}
 	}

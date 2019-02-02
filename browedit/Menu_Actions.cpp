@@ -117,7 +117,7 @@ void BrowEdit::menuActionsLightmapCalculate()
 				if ( dist >= light->range )
 					continue;
 
-				float brightness = ( light->range - dist ) / light->range;
+				float brightness = powf(( light->range - dist ) / light->range, 1.3f);
 
 				blib::math::Ray ray(groundPos, glm::normalize(vdist));
 				bool collides = false;
@@ -134,9 +134,9 @@ void BrowEdit::menuActionsLightmapCalculate()
 				if (!collides)
 				{
 					//intensity += light->intensity * dot * attenuation;
-					ret.r += (int)( light->color.r * dot * brightness * 400 );
-					ret.g += (int)( light->color.g * dot * brightness * 400 );
-					ret.b += (int)( light->color.b * dot * brightness * 400 );
+					ret.r += (int)( light->color.r * dot * brightness * 600.0f );
+					ret.g += (int)( light->color.g * dot * brightness * 600.0f );
+					ret.b += (int)( light->color.b * dot * brightness * 600.0f );
 				}
 			}
 
