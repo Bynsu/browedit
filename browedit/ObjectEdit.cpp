@@ -372,6 +372,19 @@ void BrowEdit::objectEditUpdate()
 			else if (objectEditModeTool == ObjectEditModeTool::Scale)
 				objectScaleDirection = keyState.isPressed(blib::Key::SHIFT) ? ScaleTool::Axis::XY : ScaleTool::Axis::Z;
 		}
+		else if ( keyState.isPressed(blib::Key::P) && !lastKeyState.isPressed(blib::Key::P) )
+		{
+			// open properties window for selected objects
+			for ( size_t i = 0; i < map->getRsw()->objects.size(); i++ ) {
+				Rsw::Object *obj = map->getRsw()->objects[i];
+				if ( obj->selected ) {
+					if ( obj->type == Rsw::Object::Type::Model )
+						new ModelPropertiesWindow(( Rsw::Model* )obj, resourceManager, this);
+					else if ( obj->type == Rsw::Object::Type::Light )
+						new LightPropertiesWindow(( Rsw::Light* )obj, resourceManager, this);
+				}
+			}
+		}
 
 	}
 }
