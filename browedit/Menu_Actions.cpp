@@ -123,7 +123,7 @@ void BrowEdit::menuActionsLightmapCalculate()
 				bool collides = false;
 				for (Rsw::Object* o : map->getRsw()->objects)
 				{
-					if (o->collides(ray))
+					if (o->type == Rsw::Object::Type::Model && o->collides(ray))
 					{
 						collides = true;
 						break;
