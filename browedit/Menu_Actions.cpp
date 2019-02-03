@@ -110,7 +110,7 @@ void BrowEdit::menuActionsLightmapCalculate()
 			//point light calculations
 			for (auto light : lights)
 			{
-				glm::vec3 lightPosition(5 * map->getGnd()->width + light->position.x, -light->position.y, 5 * map->getGnd()->height - light->position.z);
+				glm::vec3 lightPosition = light->getWorldPosition(map->getGnd());
 
 				glm::vec3 vdist = lightPosition - groundPos;
 				float dist = glm::length(vdist);

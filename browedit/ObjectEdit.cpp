@@ -14,6 +14,7 @@
 #include "actions/GroupAction.h"
 
 #include "windows/ModelPropertiesWindow.h"
+#include "windows/LightPropertiesWindow.h"
 #include "windows/ObjectWindow.h"
 
 using blib::util::Log;
@@ -132,8 +133,10 @@ void BrowEdit::objectEditUpdate()
 						closestObject->selected = closestObject->collides(mapRenderer.mouseRay);
 						if (closestObject->selected && mouseState.clickcount == 2)
 						{
-							if (closestObject->type == Rsw::Object::Type::Model)
-								new ModelPropertiesWindow((Rsw::Model*)closestObject, resourceManager, this);
+							if ( closestObject->type == Rsw::Object::Type::Model )
+								new ModelPropertiesWindow(( Rsw::Model* )closestObject, resourceManager, this);
+							else if ( closestObject->type == Rsw::Object::Type::Light )
+								new LightPropertiesWindow(( Rsw::Light* )closestObject, resourceManager, this);
 						}
 					}
 

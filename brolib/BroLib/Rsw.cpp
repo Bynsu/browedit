@@ -933,4 +933,42 @@ float Rsw::Light::realRange()
 	return adjustedRange;
 }
 
+std::vector<glm::vec3> Rsw::Light::collisions(const blib::math::Ray &ray)
+{
+	//if ( !aabb.hasRayCollision(ray, 0, 10000000) )
+	//	return std::vector<glm::vec3>();
 
+	glm::mat4 invMatrixCache = inverse(this->matrixCache);
+
+	blib::math::Ray newRay = ray * invMatrixCache;
+
+	std::vector<glm::vec3> ret;
+
+	std::vector<glm::vec3> verts1 = {
+		{ -5, -5, 0 },
+		{ 5, -5, 0 },
+		{ -5, 5, 0 },
+	};
+	std::vector<glm::vec3> verts2 = {
+		{ 5, 5, 0 },
+		{ 5, -5, 0 },
+		{ -5, 5, 0 }
+	};
+
+	float t;
+
+	if ( newRay.LineIntersectPolygon(verts1, t) || newRay.LineIntersectPolygon(verts2, t) )
+		ret.push_back(glm::vec3(matrixCache * glm::vec4(newRay.origin + t * newRay.dir, 1)));
+
+	return ret;
+}
+
+bool Rsw::Light::collides(const blib::math::Ray &ray)
+{
+	return collisions(ray).size() > 0;
+}
+
+glm::vec3 Rsw::Object::getWorldPosition(Gnd *gnd)
+{
+	return glm::vec3(5 * gnd->width + this->position.x, -this->position.y, 10 + 5 * gnd->height - this->position.z);
+}

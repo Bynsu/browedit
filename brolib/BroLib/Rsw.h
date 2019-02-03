@@ -43,6 +43,7 @@ public:
 		virtual ~Object() {}
 		virtual bool collides(const blib::math::Ray &ray) { return false; };
 		virtual std::vector<glm::vec3> collisions(const blib::math::Ray &ray) { return std::vector<glm::vec3>();  };
+		glm::vec3 getWorldPosition(Gnd *gnd);
 	};
 
 
@@ -77,7 +78,6 @@ public:
 	public:
 		std::string 	todo;
 		glm::vec3		color;
-		//float			todo2;
 		
 		Light() : Object(Object::Type::Light)
 		{
@@ -97,6 +97,8 @@ public:
 		float intensity;
 
 		float realRange();
+		std::vector<glm::vec3> collisions(const blib::math::Ray &ray);
+		bool collides(const blib::math::Ray &ray);
 	};
 
 	class Sound : public Object
