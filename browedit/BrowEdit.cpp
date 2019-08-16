@@ -260,7 +260,7 @@ void BrowEdit::init()
 	rootMenu->setAction("Actions/Scale Down",						std::bind(&BrowEdit::menuActionsScaleDown, this));
 
 
-
+	
 	rootMenu->setAction("window/Help", [this]() { new HelpWindow(resourceManager, this);  });
 	rootMenu->setAction("window/Map Settings", [this]() { new MapSettingsWindow(resourceManager, this); });
 	rootMenu->linkToggle("display/objects", &mapRenderer.drawObjects);
@@ -287,6 +287,8 @@ void BrowEdit::init()
 
 	rootMenu->setAction("Camera/Modern", std::bind(&BrowEdit::setCamera, this, []() { return new ModernCamera(); }, "Modern"));
 	rootMenu->setAction("Camera/Classic", std::bind(&BrowEdit::setCamera, this, []() { return new ClassicCamera(); }, "Classic"));
+
+	rootMenu->linkToggle("heighttools/connect", &connectModifiedGatTiles);
 
 	setEditMode(EditMode::TextureEdit);
 

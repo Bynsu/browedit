@@ -142,6 +142,7 @@ public:
 	//gat
 	int activeGatTile = 0;
 	int newTextureSize = 4;
+	bool connectModifiedGatTiles = true;
 
 	class ShadowBrush
 	{
